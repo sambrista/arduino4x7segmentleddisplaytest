@@ -1,61 +1,61 @@
-//4 digitos x 7 segmentos
+//4 digits x 7 segments
 
-const int PATILLA1 = 1;
-const int PATILLA2 = 2;
-const int PATILLA3 = 3;
-const int PATILLA4 = 4;
-const int PATILLA5 = 5;
-const int PATILLA6 = 6;
-const int PATILLA7 = 7;
-const int PATILLA8 = 8;
-const int PATILLA9 = 9;
-const int PATILLA10 = 10;
-const int PATILLA11 = 11;
-const int PATILLA12 = 12;
-const int POTENCIOMETRO = 0;
+const int PIN1 = 1;
+const int PIN2 = 2;
+const int PIN3 = 3;
+const int PIN4 = 4;
+const int PIN5 = 5;
+const int PIN6 = 6; // Used to select digit
+const int PIN7 = 7;
+const int PIN8 = 8; // Used to select digit
+const int PIN9 = 9; // Used to select digit
+const int PIN10 = 10;
+const int PIN11 = 11;
+const int PIN12 = 12; // Used to select digit
+const int POT = 0;
 
 int value = 0;
 
 void setup() {
- pinMode(PATILLA1,OUTPUT);
- pinMode(PATILLA2,OUTPUT); 
- pinMode(PATILLA3,OUTPUT); 
- pinMode(PATILLA4,OUTPUT); 
- pinMode(PATILLA5,OUTPUT); 
- pinMode(PATILLA6,OUTPUT); 
- pinMode(PATILLA7,OUTPUT); 
- pinMode(PATILLA8,OUTPUT); 
- pinMode(PATILLA9,OUTPUT); 
- pinMode(PATILLA10,OUTPUT); 
- pinMode(PATILLA11,OUTPUT); 
- pinMode(PATILLA12,OUTPUT);
+ pinMode(PIN1,OUTPUT);
+ pinMode(PIN2,OUTPUT); 
+ pinMode(PIN3,OUTPUT); 
+ pinMode(PIN4,OUTPUT); 
+ pinMode(PIN5,OUTPUT); 
+ pinMode(PIN6,OUTPUT); 
+ pinMode(PIN7,OUTPUT); 
+ pinMode(PIN8,OUTPUT); 
+ pinMode(PIN9,OUTPUT); 
+ pinMode(PIN10,OUTPUT); 
+ pinMode(PIN11,OUTPUT); 
+ pinMode(PIN12,OUTPUT);
 }
 
 void selectDigit(int digit) {
  switch(digit) {
    case 1:
-     digitalWrite(PATILLA12,LOW);
-     digitalWrite(PATILLA9,HIGH);
-     digitalWrite(PATILLA8,HIGH);
-     digitalWrite(PATILLA6,HIGH);
+     digitalWrite(PIN12,LOW);
+     digitalWrite(PIN9,HIGH);
+     digitalWrite(PIN8,HIGH);
+     digitalWrite(PIN6,HIGH);
      break;
    case 2:
-     digitalWrite(PATILLA12,HIGH);
-     digitalWrite(PATILLA9,LOW);
-     digitalWrite(PATILLA8,HIGH);
-     digitalWrite(PATILLA6,HIGH);
+     digitalWrite(PIN12,HIGH);
+     digitalWrite(PIN9,LOW);
+     digitalWrite(PIN8,HIGH);
+     digitalWrite(PIN6,HIGH);
      break;
    case 3:
-     digitalWrite(PATILLA12,HIGH);
-     digitalWrite(PATILLA9,HIGH);
-     digitalWrite(PATILLA8,LOW);
-     digitalWrite(PATILLA6,HIGH);
+     digitalWrite(PIN12,HIGH);
+     digitalWrite(PIN9,HIGH);
+     digitalWrite(PIN8,LOW);
+     digitalWrite(PIN6,HIGH);
      break;
    case 4:
-     digitalWrite(PATILLA12,HIGH);
-     digitalWrite(PATILLA9,HIGH);
-     digitalWrite(PATILLA8,HIGH);
-     digitalWrite(PATILLA6,LOW);
+     digitalWrite(PIN12,HIGH);
+     digitalWrite(PIN9,HIGH);
+     digitalWrite(PIN8,HIGH);
+     digitalWrite(PIN6,LOW);
      break;
  } 
 }
@@ -63,110 +63,110 @@ void selectDigit(int digit) {
 void printNumber(int num) {
  switch(num) {
    case 0:
-     digitalWrite(PATILLA1, HIGH);
-     digitalWrite(PATILLA2, HIGH); 
-     digitalWrite(PATILLA3, LOW); 
-     digitalWrite(PATILLA4, HIGH); 
-     digitalWrite(PATILLA5, LOW); 
-     digitalWrite(PATILLA7, HIGH); 
-     digitalWrite(PATILLA10, HIGH); 
-     digitalWrite(PATILLA11, HIGH);
+     digitalWrite(PIN1, HIGH);
+     digitalWrite(PIN2, HIGH); 
+     digitalWrite(PIN3, LOW); 
+     digitalWrite(PIN4, HIGH); 
+     digitalWrite(PIN5, LOW); 
+     digitalWrite(PIN7, HIGH); 
+     digitalWrite(PIN10, HIGH); 
+     digitalWrite(PIN11, HIGH);
      break;
    case 1:
-     digitalWrite(PATILLA1, LOW);
-     digitalWrite(PATILLA2, LOW); 
-     digitalWrite(PATILLA3, LOW); 
-     digitalWrite(PATILLA4, HIGH); 
-     digitalWrite(PATILLA5, LOW); 
-     digitalWrite(PATILLA7, HIGH); 
-     digitalWrite(PATILLA10, LOW); 
-     digitalWrite(PATILLA11, LOW);
+     digitalWrite(PIN1, LOW);
+     digitalWrite(PIN2, LOW); 
+     digitalWrite(PIN3, LOW); 
+     digitalWrite(PIN4, HIGH); 
+     digitalWrite(PIN5, LOW); 
+     digitalWrite(PIN7, HIGH); 
+     digitalWrite(PIN10, LOW); 
+     digitalWrite(PIN11, LOW);
      break;
    case 2:
-     digitalWrite(PATILLA1, HIGH);
-     digitalWrite(PATILLA2, HIGH); 
-     digitalWrite(PATILLA3, LOW); 
-     digitalWrite(PATILLA4, LOW); 
-     digitalWrite(PATILLA5, HIGH); 
-     digitalWrite(PATILLA7, HIGH); 
-     digitalWrite(PATILLA10, LOW); 
-     digitalWrite(PATILLA11, HIGH);
+     digitalWrite(PIN1, HIGH);
+     digitalWrite(PIN2, HIGH); 
+     digitalWrite(PIN3, LOW); 
+     digitalWrite(PIN4, LOW); 
+     digitalWrite(PIN5, HIGH); 
+     digitalWrite(PIN7, HIGH); 
+     digitalWrite(PIN10, LOW); 
+     digitalWrite(PIN11, HIGH);
      break;
    case 3:
-     digitalWrite(PATILLA1, LOW);
-     digitalWrite(PATILLA2, HIGH); 
-     digitalWrite(PATILLA3, LOW); 
-     digitalWrite(PATILLA4, HIGH); 
-     digitalWrite(PATILLA5, HIGH); 
-     digitalWrite(PATILLA7, HIGH); 
-     digitalWrite(PATILLA10, LOW); 
-     digitalWrite(PATILLA11, HIGH);
+     digitalWrite(PIN1, LOW);
+     digitalWrite(PIN2, HIGH); 
+     digitalWrite(PIN3, LOW); 
+     digitalWrite(PIN4, HIGH); 
+     digitalWrite(PIN5, HIGH); 
+     digitalWrite(PIN7, HIGH); 
+     digitalWrite(PIN10, LOW); 
+     digitalWrite(PIN11, HIGH);
      break;
    case 4:
-     digitalWrite(PATILLA1, LOW);
-     digitalWrite(PATILLA2, LOW); 
-     digitalWrite(PATILLA3, LOW); 
-     digitalWrite(PATILLA4, HIGH); 
-     digitalWrite(PATILLA5, HIGH); 
-     digitalWrite(PATILLA7, HIGH); 
-     digitalWrite(PATILLA10, HIGH); 
-     digitalWrite(PATILLA11, LOW);
+     digitalWrite(PIN1, LOW);
+     digitalWrite(PIN2, LOW); 
+     digitalWrite(PIN3, LOW); 
+     digitalWrite(PIN4, HIGH); 
+     digitalWrite(PIN5, HIGH); 
+     digitalWrite(PIN7, HIGH); 
+     digitalWrite(PIN10, HIGH); 
+     digitalWrite(PIN11, LOW);
      break;
    case 5:
-     digitalWrite(PATILLA1, LOW);
-     digitalWrite(PATILLA2, HIGH); 
-     digitalWrite(PATILLA3, LOW); 
-     digitalWrite(PATILLA4, HIGH); 
-     digitalWrite(PATILLA5, HIGH); 
-     digitalWrite(PATILLA7, LOW); 
-     digitalWrite(PATILLA10, HIGH); 
-     digitalWrite(PATILLA11, HIGH);
+     digitalWrite(PIN1, LOW);
+     digitalWrite(PIN2, HIGH); 
+     digitalWrite(PIN3, LOW); 
+     digitalWrite(PIN4, HIGH); 
+     digitalWrite(PIN5, HIGH); 
+     digitalWrite(PIN7, LOW); 
+     digitalWrite(PIN10, HIGH); 
+     digitalWrite(PIN11, HIGH);
      break;
    case 6:
-     digitalWrite(PATILLA1, HIGH);
-     digitalWrite(PATILLA2, HIGH); 
-     digitalWrite(PATILLA3, LOW); 
-     digitalWrite(PATILLA4, HIGH); 
-     digitalWrite(PATILLA5, HIGH); 
-     digitalWrite(PATILLA7, LOW); 
-     digitalWrite(PATILLA10, HIGH); 
-     digitalWrite(PATILLA11, LOW);
+     digitalWrite(PIN1, HIGH);
+     digitalWrite(PIN2, HIGH); 
+     digitalWrite(PIN3, LOW); 
+     digitalWrite(PIN4, HIGH); 
+     digitalWrite(PIN5, HIGH); 
+     digitalWrite(PIN7, LOW); 
+     digitalWrite(PIN10, HIGH); 
+     digitalWrite(PIN11, LOW);
      break;
    case 7:
-     digitalWrite(PATILLA1, LOW);
-     digitalWrite(PATILLA2, LOW); 
-     digitalWrite(PATILLA3, LOW); 
-     digitalWrite(PATILLA4, HIGH); 
-     digitalWrite(PATILLA5, LOW); 
-     digitalWrite(PATILLA7, HIGH); 
-     digitalWrite(PATILLA10, LOW); 
-     digitalWrite(PATILLA11, HIGH);
+     digitalWrite(PIN1, LOW);
+     digitalWrite(PIN2, LOW); 
+     digitalWrite(PIN3, LOW); 
+     digitalWrite(PIN4, HIGH); 
+     digitalWrite(PIN5, LOW); 
+     digitalWrite(PIN7, HIGH); 
+     digitalWrite(PIN10, LOW); 
+     digitalWrite(PIN11, HIGH);
      break;
    case 8:
-     digitalWrite(PATILLA1, HIGH);
-     digitalWrite(PATILLA2, HIGH); 
-     digitalWrite(PATILLA3, LOW); 
-     digitalWrite(PATILLA4, HIGH); 
-     digitalWrite(PATILLA5, HIGH); 
-     digitalWrite(PATILLA7, HIGH); 
-     digitalWrite(PATILLA10, HIGH); 
-     digitalWrite(PATILLA11, HIGH);
+     digitalWrite(PIN1, HIGH);
+     digitalWrite(PIN2, HIGH); 
+     digitalWrite(PIN3, LOW); 
+     digitalWrite(PIN4, HIGH); 
+     digitalWrite(PIN5, HIGH); 
+     digitalWrite(PIN7, HIGH); 
+     digitalWrite(PIN10, HIGH); 
+     digitalWrite(PIN11, HIGH);
      break;
    case 9:
-     digitalWrite(PATILLA1, LOW);
-     digitalWrite(PATILLA2, LOW); 
-     digitalWrite(PATILLA3, LOW); 
-     digitalWrite(PATILLA4, HIGH); 
-     digitalWrite(PATILLA5, HIGH); 
-     digitalWrite(PATILLA7, HIGH); 
-     digitalWrite(PATILLA10, HIGH); 
-     digitalWrite(PATILLA11, HIGH);
+     digitalWrite(PIN1, LOW);
+     digitalWrite(PIN2, LOW); 
+     digitalWrite(PIN3, LOW); 
+     digitalWrite(PIN4, HIGH); 
+     digitalWrite(PIN5, HIGH); 
+     digitalWrite(PIN7, HIGH); 
+     digitalWrite(PIN10, HIGH); 
+     digitalWrite(PIN11, HIGH);
      break;
  } 
 }
 
 void loop() {
-  value = analogRead(POTENCIOMETRO);
+  value = analogRead(POT);
   int u = value % 10;
   int d = (value / 10) % 10;
   int c = (value / 100)  % 10;
