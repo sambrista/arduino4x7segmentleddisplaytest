@@ -1,61 +1,61 @@
 //4 digits x 7 segments
 
-const int PIN1 = 1;
-const int PIN2 = 2;
-const int PIN3 = 3;
-const int PIN4 = 4;
-const int PIN5 = 5;
-const int PIN6 = 6; // Used to select digit
-const int PIN7 = 7;
-const int PIN8 = 8; // Used to select digit
-const int PIN9 = 9; // Used to select digit
-const int PIN10 = 10;
-const int PIN11 = 11;
-const int PIN12 = 12; // Used to select digit
+const int PIN_1 = 1;
+const int PIN_2 = 2;
+const int PIN_3 = 3;
+const int PIN_4 = 4;
+const int PIN_5 = 5;
+const int PIN_6 = 6; // Used to select digit
+const int PIN_7 = 7;
+const int PIN_8 = 8; // Used to select digit
+const int PIN_9 = 9; // Used to select digit
+const int PIN_10 = 10;
+const int PIN_11 = 11;
+const int PIN_12 = 12; // Used to select digit
 const int POT = 0;
 
 int value = 0;
 
 void setup() {
- pinMode(PIN1,OUTPUT);
- pinMode(PIN2,OUTPUT); 
- pinMode(PIN3,OUTPUT); 
- pinMode(PIN4,OUTPUT); 
- pinMode(PIN5,OUTPUT); 
- pinMode(PIN6,OUTPUT); 
- pinMode(PIN7,OUTPUT); 
- pinMode(PIN8,OUTPUT); 
- pinMode(PIN9,OUTPUT); 
- pinMode(PIN10,OUTPUT); 
- pinMode(PIN11,OUTPUT); 
- pinMode(PIN12,OUTPUT);
+ pinMode(PIN_1,OUTPUT);
+ pinMode(PIN_2,OUTPUT); 
+ pinMode(PIN_3,OUTPUT); 
+ pinMode(PIN_4,OUTPUT); 
+ pinMode(PIN_5,OUTPUT); 
+ pinMode(PIN_6,OUTPUT); 
+ pinMode(PIN_7,OUTPUT); 
+ pinMode(PIN_8,OUTPUT); 
+ pinMode(PIN_9,OUTPUT); 
+ pinMode(PIN_10,OUTPUT); 
+ pinMode(PIN_11,OUTPUT); 
+ pinMode(PIN_12,OUTPUT);
 }
 
 void selectDigit(int digit) {
  switch(digit) {
    case 1:
-     digitalWrite(PIN12,LOW);
-     digitalWrite(PIN9,HIGH);
-     digitalWrite(PIN8,HIGH);
-     digitalWrite(PIN6,HIGH);
+     digitalWrite(PIN_12,LOW);
+     digitalWrite(PIN_9,HIGH);
+     digitalWrite(PIN_8,HIGH);
+     digitalWrite(PIN_6,HIGH);
      break;
    case 2:
-     digitalWrite(PIN12,HIGH);
-     digitalWrite(PIN9,LOW);
-     digitalWrite(PIN8,HIGH);
-     digitalWrite(PIN6,HIGH);
+     digitalWrite(PIN_12,HIGH);
+     digitalWrite(PIN_9,LOW);
+     digitalWrite(PIN_8,HIGH);
+     digitalWrite(PIN_6,HIGH);
      break;
    case 3:
-     digitalWrite(PIN12,HIGH);
-     digitalWrite(PIN9,HIGH);
-     digitalWrite(PIN8,LOW);
-     digitalWrite(PIN6,HIGH);
+     digitalWrite(PIN_12,HIGH);
+     digitalWrite(PIN_9,HIGH);
+     digitalWrite(PIN_8,LOW);
+     digitalWrite(PIN_6,HIGH);
      break;
    case 4:
-     digitalWrite(PIN12,HIGH);
-     digitalWrite(PIN9,HIGH);
-     digitalWrite(PIN8,HIGH);
-     digitalWrite(PIN6,LOW);
+     digitalWrite(PIN_12,HIGH);
+     digitalWrite(PIN_9,HIGH);
+     digitalWrite(PIN_8,HIGH);
+     digitalWrite(PIN_6,LOW);
      break;
  } 
 }
@@ -63,104 +63,104 @@ void selectDigit(int digit) {
 void printNumber(int num) {
  switch(num) {
    case 0:
-     digitalWrite(PIN1, HIGH);
-     digitalWrite(PIN2, HIGH); 
-     digitalWrite(PIN3, LOW); 
-     digitalWrite(PIN4, HIGH); 
-     digitalWrite(PIN5, LOW); 
-     digitalWrite(PIN7, HIGH); 
-     digitalWrite(PIN10, HIGH); 
-     digitalWrite(PIN11, HIGH);
+     digitalWrite(PIN_1, HIGH);
+     digitalWrite(PIN_2, HIGH); 
+     digitalWrite(PIN_3, LOW); 
+     digitalWrite(PIN_4, HIGH); 
+     digitalWrite(PIN_5, LOW); 
+     digitalWrite(PIN_7, HIGH); 
+     digitalWrite(PIN_10, HIGH); 
+     digitalWrite(PIN_11, HIGH);
      break;
    case 1:
-     digitalWrite(PIN1, LOW);
-     digitalWrite(PIN2, LOW); 
-     digitalWrite(PIN3, LOW); 
-     digitalWrite(PIN4, HIGH); 
-     digitalWrite(PIN5, LOW); 
-     digitalWrite(PIN7, HIGH); 
-     digitalWrite(PIN10, LOW); 
-     digitalWrite(PIN11, LOW);
+     digitalWrite(PIN_1, LOW);
+     digitalWrite(PIN_2, LOW); 
+     digitalWrite(PIN_3, LOW); 
+     digitalWrite(PIN_4, HIGH); 
+     digitalWrite(PIN_5, LOW); 
+     digitalWrite(PIN_7, HIGH); 
+     digitalWrite(PIN_10, LOW); 
+     digitalWrite(PIN_11, LOW);
      break;
    case 2:
-     digitalWrite(PIN1, HIGH);
-     digitalWrite(PIN2, HIGH); 
-     digitalWrite(PIN3, LOW); 
-     digitalWrite(PIN4, LOW); 
-     digitalWrite(PIN5, HIGH); 
-     digitalWrite(PIN7, HIGH); 
-     digitalWrite(PIN10, LOW); 
-     digitalWrite(PIN11, HIGH);
+     digitalWrite(PIN_1, HIGH);
+     digitalWrite(PIN_2, HIGH); 
+     digitalWrite(PIN_3, LOW); 
+     digitalWrite(PIN_4, LOW); 
+     digitalWrite(PIN_5, HIGH); 
+     digitalWrite(PIN_7, HIGH); 
+     digitalWrite(PIN_10, LOW); 
+     digitalWrite(PIN_11, HIGH);
      break;
    case 3:
-     digitalWrite(PIN1, LOW);
-     digitalWrite(PIN2, HIGH); 
-     digitalWrite(PIN3, LOW); 
-     digitalWrite(PIN4, HIGH); 
-     digitalWrite(PIN5, HIGH); 
-     digitalWrite(PIN7, HIGH); 
-     digitalWrite(PIN10, LOW); 
-     digitalWrite(PIN11, HIGH);
+     digitalWrite(PIN_1, LOW);
+     digitalWrite(PIN_2, HIGH); 
+     digitalWrite(PIN_3, LOW); 
+     digitalWrite(PIN_4, HIGH); 
+     digitalWrite(PIN_5, HIGH); 
+     digitalWrite(PIN_7, HIGH); 
+     digitalWrite(PIN_10, LOW); 
+     digitalWrite(PIN_11, HIGH);
      break;
    case 4:
-     digitalWrite(PIN1, LOW);
-     digitalWrite(PIN2, LOW); 
-     digitalWrite(PIN3, LOW); 
-     digitalWrite(PIN4, HIGH); 
-     digitalWrite(PIN5, HIGH); 
-     digitalWrite(PIN7, HIGH); 
-     digitalWrite(PIN10, HIGH); 
-     digitalWrite(PIN11, LOW);
+     digitalWrite(PIN_1, LOW);
+     digitalWrite(PIN_2, LOW); 
+     digitalWrite(PIN_3, LOW); 
+     digitalWrite(PIN_4, HIGH); 
+     digitalWrite(PIN_5, HIGH); 
+     digitalWrite(PIN_7, HIGH); 
+     digitalWrite(PIN_10, HIGH); 
+     digitalWrite(PIN_11, LOW);
      break;
    case 5:
-     digitalWrite(PIN1, LOW);
-     digitalWrite(PIN2, HIGH); 
-     digitalWrite(PIN3, LOW); 
-     digitalWrite(PIN4, HIGH); 
-     digitalWrite(PIN5, HIGH); 
-     digitalWrite(PIN7, LOW); 
-     digitalWrite(PIN10, HIGH); 
-     digitalWrite(PIN11, HIGH);
+     digitalWrite(PIN_1, LOW);
+     digitalWrite(PIN_2, HIGH); 
+     digitalWrite(PIN_3, LOW); 
+     digitalWrite(PIN_4, HIGH); 
+     digitalWrite(PIN_5, HIGH); 
+     digitalWrite(PIN_7, LOW); 
+     digitalWrite(PIN_10, HIGH); 
+     digitalWrite(PIN_11, HIGH);
      break;
    case 6:
-     digitalWrite(PIN1, HIGH);
-     digitalWrite(PIN2, HIGH); 
-     digitalWrite(PIN3, LOW); 
-     digitalWrite(PIN4, HIGH); 
-     digitalWrite(PIN5, HIGH); 
-     digitalWrite(PIN7, LOW); 
-     digitalWrite(PIN10, HIGH); 
-     digitalWrite(PIN11, LOW);
+     digitalWrite(PIN_1, HIGH);
+     digitalWrite(PIN_2, HIGH); 
+     digitalWrite(PIN_3, LOW); 
+     digitalWrite(PIN_4, HIGH); 
+     digitalWrite(PIN_5, HIGH); 
+     digitalWrite(PIN_7, LOW); 
+     digitalWrite(PIN_10, HIGH); 
+     digitalWrite(PIN_11, LOW);
      break;
    case 7:
-     digitalWrite(PIN1, LOW);
-     digitalWrite(PIN2, LOW); 
-     digitalWrite(PIN3, LOW); 
-     digitalWrite(PIN4, HIGH); 
-     digitalWrite(PIN5, LOW); 
-     digitalWrite(PIN7, HIGH); 
-     digitalWrite(PIN10, LOW); 
-     digitalWrite(PIN11, HIGH);
+     digitalWrite(PIN_1, LOW);
+     digitalWrite(PIN_2, LOW); 
+     digitalWrite(PIN_3, LOW); 
+     digitalWrite(PIN_4, HIGH); 
+     digitalWrite(PIN_5, LOW); 
+     digitalWrite(PIN_7, HIGH); 
+     digitalWrite(PIN_10, LOW); 
+     digitalWrite(PIN_11, HIGH);
      break;
    case 8:
-     digitalWrite(PIN1, HIGH);
-     digitalWrite(PIN2, HIGH); 
-     digitalWrite(PIN3, LOW); 
-     digitalWrite(PIN4, HIGH); 
-     digitalWrite(PIN5, HIGH); 
-     digitalWrite(PIN7, HIGH); 
-     digitalWrite(PIN10, HIGH); 
-     digitalWrite(PIN11, HIGH);
+     digitalWrite(PIN_1, HIGH);
+     digitalWrite(PIN_2, HIGH); 
+     digitalWrite(PIN_3, LOW); 
+     digitalWrite(PIN_4, HIGH); 
+     digitalWrite(PIN_5, HIGH); 
+     digitalWrite(PIN_7, HIGH); 
+     digitalWrite(PIN_10, HIGH); 
+     digitalWrite(PIN_11, HIGH);
      break;
    case 9:
-     digitalWrite(PIN1, LOW);
-     digitalWrite(PIN2, LOW); 
-     digitalWrite(PIN3, LOW); 
-     digitalWrite(PIN4, HIGH); 
-     digitalWrite(PIN5, HIGH); 
-     digitalWrite(PIN7, HIGH); 
-     digitalWrite(PIN10, HIGH); 
-     digitalWrite(PIN11, HIGH);
+     digitalWrite(PIN_1, LOW);
+     digitalWrite(PIN_2, LOW); 
+     digitalWrite(PIN_3, LOW); 
+     digitalWrite(PIN_4, HIGH); 
+     digitalWrite(PIN_5, HIGH); 
+     digitalWrite(PIN_7, HIGH); 
+     digitalWrite(PIN_10, HIGH); 
+     digitalWrite(PIN_11, HIGH);
      break;
  } 
 }
